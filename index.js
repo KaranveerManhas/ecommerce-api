@@ -1,14 +1,11 @@
 const express = require('express');
 const port = 3000;
-
 const app = express();
+const database = require('./config/mongoose');
 
 
 
-
-app.get('/', (req, res) => {
-    res.send("Ecommerce API");
-})
+app.use('/', require('./routes/api'));
 
 app.listen(port, function(err){
     if(err){
