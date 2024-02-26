@@ -4,13 +4,11 @@ require('dotenv').config();
 const mysql = require('mysql2');
 
 // Create the connection to database
-const ecommerce = mysql.createConnection({
+module.exports.config ={
     host: process.env.MYSQL_HOSTNAME,
     user: process.env.MYSQL_USERNAME,
     password: process.env.MYSQL_PASSWORD,
-    // database: process.env.MYSQL_DATABASE,
+    database: process.env.MYSQL_DATABASE,
     timezone: 'Z',
     dateStrings: true
-});
-
-module.exports = ecommerce;
+};
