@@ -10,11 +10,11 @@ async function connectToDB(dbName){
     return connection;
 }
 
-module.exports.initDB = async function initDB(dbName = 'ecommerce'){
+module.exports.initDB = async function initDB(dbName){
     response[dbName] = await connectToDB(dbName);
 }
 
-module.exports.executeQuery = async function executeQuery(query, placeholders, dbName='ecommerce'){
+module.exports.executeQuery = async function executeQuery(query, placeholders, dbName){
     if (!response[dbName]){
         await this.initDB(dbName);
     }
