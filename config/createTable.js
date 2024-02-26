@@ -1,0 +1,1 @@
+const queryToCreateUSer = "create table user (name)";

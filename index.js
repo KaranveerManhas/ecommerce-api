@@ -1,8 +1,7 @@
 const express = require('express');
 const port = 3000;
 const app = express();
-const database = require('./config/mongoose');
-
+const db = require('./config/db');
 
 
 app.use('/', require('./routes/api'));
